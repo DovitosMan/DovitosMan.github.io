@@ -7,6 +7,10 @@
     --core-mint: #00A88B;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(39, 39, 39);
     color: white;
@@ -36,45 +40,59 @@ body {
 }
 
 .card {
+    width: 493px;
+    height: 666px;
     flex-shrink: 0;
-    width: 675px;
-    height: 900px;
     border-radius: 30px;
-    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
-    padding: 24px;
+    /* box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(0, 0, 0, 0.12); */
+    padding: 40px 32px;
+    background-color: #00A88B;
+    background: url("bg_image.png"), linear-gradient(152deg, rgba(136, 235, 239, 0.90) -0.04%,rgba(83, 91, 230, 0.90)100%);
+    
 }
 .card:hover {
     background-color: rgb(255, 255, 255);
-}
-.weather_card {
-    
-    background-image: url("Rectangle 2.png"), linear-gradient(152deg, rgba(136, 235, 239, 0.9) -0.04%,rgba(83, 91, 230, 0.9)100%);
-    background-color: #00A88B;
-    
 }
 .main_text {
     color:white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.158);
 }
-h3 {
+h1 {
+    margin: 8px 0px;
     color: #FFF;
     font-size: 37px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.089); */
 }
-h4 {
+h2 {
+    margin: 8px 0px;
     color: #FFF;
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
-h5 {
+h3 {
+    margin: 0px;
     color: #FFF;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+.day {
+    width: 176px;
+    height: 37px;
+    flex-shrink: 0;
+}
+.date {
+    width: 154px;
+    height: 36px;
+    flex-shrink: 0;
+}
+.location {
+    width: 154px;
+    height: 36px;
+    flex-shrink: 0;
 }
