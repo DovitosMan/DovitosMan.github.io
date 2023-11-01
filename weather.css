@@ -6,93 +6,71 @@
     --core-blue: #307FE2;
     --core-mint: #00A88B;
 }
-
 * {
     box-sizing: border-box;
 }
-
 body {
-    background-color: rgb(39, 39, 39);
+    width: 1440px;
+    height: 1024px;
+    margin: 0px;
+    background: #343D4B;;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
+    width: 1013px;
+    height: 666px;
     display: flex;
     align-items: center;
-  justify-content: center;
-    gap: 24px;
 }
-
-.board {
-    width: 400px;
-    border-radius: 16px;
-    background-color: #262626;
-    padding: 24px;
-    flex-shrink: 0;
-}
-
-.board-title {
-    font-family: SF Pro Display;
-    font-size: 37px;
-    font-weight: 700;
-    line-height: 44px;
-}
-
-.card {
+.card_left {
+    position: absolute;
     width: 493px;
     height: 666px;
     flex-shrink: 0;
     border-radius: 30px;
-    /* box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(0, 0, 0, 0.12); */
-    padding: 40px 32px;
-    background-color: #00A88B;
-    background: url("bg_image.png"), linear-gradient(152deg, rgba(136, 235, 239, 0.90) -0.04%,rgba(83, 91, 230, 0.90)100%);
+    padding: 48px 32px;
+    background-color: #000000;
+    background: url("bg_image.png"), linear-gradient(152deg, rgba(136, 235, 239, 1) -0.04%,rgba(83, 91, 230, 1)100%);
     
 }
-.card:hover {
-    background-color: rgb(255, 255, 255);
+.top_text {
+    display: grid;
+    grid-template-rows: [start] 44px [line2] 36px [line3] 28px [end];
+    gap: 10px;
 }
-.main_text {
-    color:white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.158);
-}
-h1 {
-    margin: 8px 0px;
-    color: #FFF;
+.day {
     font-size: 37px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
-h2 {
-    margin: 8px 0px;
-    color: #FFF;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-h3 {
-    margin: 0px;
-    color: #FFF;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-.day {
-    width: 176px;
-    height: 37px;
-    flex-shrink: 0;
-}
 .date {
-    width: 154px;
-    height: 36px;
-    flex-shrink: 0;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
 }
 .location {
-    width: 154px;
-    height: 36px;
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: 8px;
+    align-items:center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.card_right {
+    position: absolute;
+    width: 944px;
+    height: 623px;
     flex-shrink: 0;
+    padding: 55px 50px;
+    border-radius: 25px;
+    background: #222831;
 }
