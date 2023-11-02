@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 :root {
     --core-pink: #C340A1;
     --core-periwinkle: #6A6DCD;
@@ -13,7 +13,7 @@ body {
     width: 1440px;
     height: 1024px;
     margin: 0px;
-    background: #343D4B;;
+    background: #343D4B;
     color: white;
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -22,16 +22,16 @@ body {
 }
 
 .container {
-    width: 1013px;
-    height: 666px;
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: 493px 1fr;
+    grid-template-rows: 666px;
 }
 .card_left {
-    position: absolute;
-    width: 493px;
-    height: 666px;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
+    height: 666px;
     border-radius: 30px;
     padding: 48px 32px;
     background-color: #000000;
@@ -64,13 +64,117 @@ body {
     font-size: 20px;
     line-height: normal;
 }
-
+.bottom_text {
+    display: grid;
+    grid-template-rows: [start] 95px [line2] 61px [line3] 33px [end];
+    gap: 9px;
+    margin-top: 200px;
+}
+.temperature {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.sun {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 .card_right {
-    position: absolute;
-    width: 944px;
-    height: 623px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
     flex-shrink: 0;
     padding: 55px 50px;
-    border-radius: 25px;
+    border-radius: 0 25px 25px 0;
     background: #222831;
+}
+.wind {
+    display: grid;
+}
+.ico {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(39, 46, 55, 0.99);
+}
+.day1 {
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 55px 24px 24px;
+    gap: 15px;
+    justify-items: center;
+    width: 104px;
+    height: 168px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 1px 2px 4px 0px #222831;
+} 
+.day2 {
+    padding: 12px;
+    display: grid;
+    grid-template-rows: 55px 24px 24px;
+    gap: 15px;
+    justify-items: center;
+    width: 103px;
+    height: 165px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #272E37;
+    box-shadow: 1px 2px 4px 0px #222831;
+} 
+.temp_right-11 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.temp_right-12 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.temp_right-21 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.temp_right-22 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.change {
+    margin-top: 69px;
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 415px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(91deg, rgba(144, 217, 224, 0.90) 0.2%, rgba(84, 96, 230, 0.90) 100%);
+
+}
+.change_text {
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
