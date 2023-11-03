@@ -93,12 +93,21 @@ body {
 }
 .wind {
     display: grid;
+    margin-bottom: 79px;
+    grid-template-rows: 35px 35px 35px;
+    grid-template-columns: 275px 140px;
+    gap: 16px;
+
 }
 .ico {
-    display: flex;
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
     align-items: center;
+    gap: 0px;
     flex-shrink: 0;
     border-radius: 12px;
+    width: 415px;
+    height: 165px;
     background: rgba(39, 46, 55, 0.99);
 }
 .day1 {
@@ -114,6 +123,7 @@ body {
     box-shadow: 1px 2px 4px 0px #222831;
 } 
 .day2 {
+    margin: 2px 2px 2px 0px;
     padding: 12px;
     display: grid;
     grid-template-rows: 55px 24px 24px;
@@ -176,5 +186,18 @@ body {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
+    line-height: normal;
+}
+.left_grid_text {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.right_grid_text {
+    text-align: right;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
     line-height: normal;
 }
