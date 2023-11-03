@@ -1,0 +1,55 @@
+.card_left {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 666px;
+    border-radius: 30px;
+    padding: 48px 32px;
+    background-color: #000000;
+    background: url(/image/bg_image.png), linear-gradient(152deg, rgba(136, 235, 239, 1) -0.04%,rgba(83, 91, 230, 1)100%);
+    
+}
+.top_text {
+    display: grid;
+    grid-template-rows: [start] 44px [line2] 36px [line3] 28px [end];
+    gap: 10px;
+}
+.day {
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.date {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+.location {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: 8px;
+    align-items:center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: normal;
+}
+.bottom_text {
+    display: grid;
+    grid-template-rows: [start] 95px [line2] 61px [line3] 33px [end];
+    gap: 9px;
+    margin-top: 200px;
+}
+.temperature {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.sun {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
