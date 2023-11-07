@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-@import url(style/card__left.css);
-@import url(style/card__right.css);
+@import url(style/card-left.css);
+@import url(style/card-right.css);
+@import url(style/text.css);
 :root {
-    --core-pink: #C340A1;
-    --core-periwinkle: #6A6DCD;
-    --core-red: #D93535;
-    --core-blue: #307FE2;
-    --core-mint: #00A88B;
 }
 *,
 *::before,
@@ -14,8 +10,6 @@
     box-sizing: border-box;
 }
 body {
-    width: 1440px;
-    height: 1024px;
     margin: 0px;
     background: #343D4B;
     color: white;
@@ -26,8 +20,14 @@ body {
 }
 
 .container {
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: 493px 1fr;
-    grid-template-rows: 666px;
+    justify-content: center;
+}
+@media screen and (max-width:1000px) {
+    .container{
+        flex-direction: column;
+        width:100vw;
+        min-height:100vh
+    }
 }
