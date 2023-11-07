@@ -1,0 +1,64 @@
+.card-right__week-day {
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
+    align-content: center;
+    white-space: nowrap;
+    gap: 0px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    width: 415px;
+    height: 165px;
+    background: rgba(39, 46, 55, 0.99);
+}
+.card-right__week-day--active {
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 55px 24px 24px;
+    gap: 15px;
+    justify-items: center;
+    border-radius: 10px;
+    background: white;
+    color: #222831;
+    box-shadow: 1px 2px 4px 0px #222831;
+} 
+.card-right__week-day--unactive {
+    margin: 2px 2px 2px 0px;
+    padding: 12px;
+    display: grid;
+    grid-template-rows: 55px 24px 24px;
+    gap: 15px;
+    justify-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #272E37;
+    box-shadow: 1px 2px 4px 0px #222831;
+} 
+
+.card-right__week-day--unactive svg path {
+    fill: white;
+}
+.card-right__week-day-text {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card-right__week-day-temperature {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+@media screen and (max-width:1000px) {
+    .card-right__week-day {
+    width: 100%;
+    margin: 0 0 5% 0;
+}
+    .card-right__week-day--active,.card-right__week-day--unactive {
+    padding: 10%;
+}
+
+
+}

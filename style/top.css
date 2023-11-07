@@ -1,0 +1,41 @@
+.card-left__top {
+    display: grid;
+    grid-template-rows: [start] 44px [line2] 36px [line3] auto [end];
+    gap: 10px;
+}
+.card-left__top-day {
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.card-left__top-date {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+.card-left__top-location {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: 8px;
+    align-items:center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: normal;
+}
+@media screen and (max-width:1000px) {
+.card-left__top {
+    font-weight: 700;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.card-left__bottom {
+    display: grid;
+    grid-template-rows: 95px 61px 33px;
+    justify-items: center;
+    justify-content: center;
+}
+}

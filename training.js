@@ -26,26 +26,23 @@ if ((Text_3.length>Text_1.length) && (Text_3.length>Text_2.length)) {
     console.log(Text_3)
 } 
 //палиндом
-let n1 = Text_1.length;
-for ( let i = 0; i < (n1-1); i++)  {
-    console.log(Text_1[0],Text_1[n1-1]);
-    if (Text_1[i]==Text_1[n1-i-1]){
+let n1 = Text_1.length-1;
+for ( let i = 0; i < n1/2; i++)  {
+    if (Text_1[i]==Text_1[n1-i]){
         console.log(Text_1," - слово палиндром");
     } else 
     console.log(Text_1," - слово не палиндром");
 }
-let n2 = Text_2.length;
-for ( let i = 0; i < (n2-1); i++)  {
-    // console.log(Text_1[0],Text_1[n-1]);
-    if (Text_2[i]==Text_2[n2-i-1]){
+let n2 = Text_2.length-1;
+for ( let i = 0; i < n2/2; i++)  {
+    if (Text_2[i]==Text_2[n2-i]){
         console.log(Text_2," - слово палиндром");
     } else 
     console.log(Text_2," - слово не палиндром");
 }
-let n3 = Text_3.length;
-for ( let i = 0; i < (n3-1); i++)  {
-    // console.log(Text_1[0],Text_1[n-1]);
-    if (Text_3[i]==Text_3[n3-i-1]){
+let n3 = Text_3.length-1;
+for ( let i = 0; i < n3/2; i++)  {
+    if (Text_3[i]==Text_3[n3-i]){
         console.log(Text_3," - слово палиндром");
     } else 
     console.log(Text_3," - слово не палиндром");

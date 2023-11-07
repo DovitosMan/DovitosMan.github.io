@@ -1,4 +1,3 @@
-
 .card-right {
     display: flex;
     flex-direction: column;
@@ -7,115 +6,13 @@
     border-radius: 0 25px 25px 0;
     background: #222831;
 }
-.wind {
-    display: grid;
-    margin-bottom: 79px;
-    grid-template-rows: 35px 35px 35px;
-    grid-template-columns: max-content 1fr;
-    gap: 16px;
-    font-size: 28px;
-    font-style: normal;
-    line-height: normal;
-}
-.wind__left-column {
-    font-weight: 700;
-}
-.wind__right-column {
-    text-align: right;
-    font-weight: 500;
-}
-.week-day {
-    display: grid;
-    grid-template-columns:  auto auto auto auto;
-    align-content: center;
-    white-space: nowrap;
-    gap: 0px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    width: 415px;
-    height: 165px;
-    background: rgba(39, 46, 55, 0.99);
-}
-.week-day--active {
-    padding: 15px;
-    display: grid;
-    grid-template-rows: 55px 24px 24px;
-    gap: 15px;
-    justify-items: center;
-    border-radius: 10px;
-    background: white;
-    color: #222831;
-    box-shadow: 1px 2px 4px 0px #222831;
-} 
-.week-day--unactive {
-    margin: 2px 2px 2px 0px;
-    padding: 12px;
-    display: grid;
-    grid-template-rows: 55px 24px 24px;
-    gap: 15px;
-    justify-items: center;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #272E37;
-    box-shadow: 1px 2px 4px 0px #222831;
-} 
-
-.week-day--unactive svg path {
-    fill: white;
-}
-.week-day--text {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-.week-day--temperature {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.button {
-    margin-top: 69px;
-    display: grid;
-    grid-template-columns: min-content max-content;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 415px;
-    height: 53px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: linear-gradient(91deg, rgba(144, 217, 224, 0.90) 0.2%, rgba(84, 96, 230, 0.90) 100%);
-
-}
-.button__text {
-    text-align: right;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
 @media screen and (max-width:1000px) {
-    .card-right {
-        justify-content: space-around;
-        padding: 5% 5% 0 5%;
-        border-radius: 0 0 30px 30px;
-        flex-basis: auto;
-        width:100%;
-        flex-grow: 1;
-    }
-    .wind,.button,.week-day {
-        width: 100%;
-        margin: 0 0 5% 0;
-    }
-    .week-day--active,.week-day--unactive {
-        padding: 10%;
-    }
-    .wind {
-        grid-template-rows: max-content max-content max-content;
-        font-size: 1em;
-    }
-}   
+.card-right {
+    justify-content: space-around;
+    padding: 5% 5% 0 5%;
+    border-radius: 0 0 30px 30px;
+    flex-basis: auto;
+    width:100%;
+    flex-grow: 1;
+}
+}
