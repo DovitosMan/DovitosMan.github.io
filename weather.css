@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import url(style/card-left.css);
 @import url(style/card-right.css);
-@import url(style/text.css);
-:root {
-}
 *,
 *::before,
 *::after {

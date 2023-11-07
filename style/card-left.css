@@ -20,12 +20,12 @@
     background: url(../image/bg_image.png), linear-gradient(152deg, rgba(136, 235, 239, 1) -0.04%,rgba(83, 91, 230, 1)100%);
     
 }
-.top {
+.card-left__top {
     display: grid;
     grid-template-rows: [start] 44px [line2] 36px [line3] auto [end];
     gap: 10px;
 }
-.top__day {
+.card-left__top-day {
     font-size: 37px;
     font-style: normal;
     font-weight: 700;
