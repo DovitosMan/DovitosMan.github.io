@@ -5,8 +5,7 @@
     grid-template-columns: max-content 1fr;
     gap: 16px;
     font-size: 28px;
-    font-style: normal;
-    line-height: normal;
+    white-space: nowrap;
 }
 .card-right__wind-left-column {
     font-weight: 700;
@@ -19,5 +18,6 @@
 .card-right__wind {
     grid-template-rows: max-content max-content max-content;
     font-size: 1em;
+    margin-bottom: 5%;
 }
 }

@@ -2,16 +2,17 @@
     display: grid;
     grid-template-rows: 95px 61px 33px;
     gap: 9px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 .card-left__bottom-temperature {
     font-size: 50px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
 }
 .card-left__bottom-sun {
     font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+}
+@media screen and (max-width:1000px) {
+.card-left__bottom {
+    justify-items: center;
+}
 }

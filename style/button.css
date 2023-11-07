@@ -7,21 +7,15 @@
     gap: 8px;
     width: 415px;
     height: 53px;
-    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 600;
     border-radius: 10px;
     background: linear-gradient(91deg, rgba(144, 217, 224, 0.90) 0.2%, rgba(84, 96, 230, 0.90) 100%);
 
 }
-.card-right__button-text {
-    text-align: right;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
 @media screen and (max-width:1000px) {
     .card-right__button {
         width: 100%;
-        margin: 0 0 5% 0;
+        margin: 0;
     }   
 }   
