@@ -1,4 +1,4 @@
-.card-right__wind {
+.card-right__topR {
     display: grid;
     margin-bottom: 79px;
     grid-template-rows: 35px 35px 35px;
@@ -7,15 +7,15 @@
     font-size: 28px;
     white-space: nowrap;
 }
-.card-right__wind-left-column {
+.card-right__topR-left-column {
     font-weight: 700;
 }
-.card-right__wind-right-column {
+.card-right__topR-right-column {
     text-align: right;
     font-weight: 500;
 }
 @media screen and (max-width:1000px) {
-.card-right__wind {
+.card-right__topR {
     grid-template-rows: max-content max-content max-content;
     font-size: 1em;
     margin-bottom: 5%;
