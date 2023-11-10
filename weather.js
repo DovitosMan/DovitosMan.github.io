@@ -130,92 +130,52 @@ const locations = [
     }
   ];
 
-const daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 window.addEventListener("load", function(){
+    const daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const [currentLocation] = locations;
     const { name, country, days } = currentLocation;
-    const [firstDay] = days;
-    const weekElement = document.getElementById('week');
+
     // const dateElement = document.getElementById('date');
     const cityElement = document.getElementById('city');
     const countryElement = document.getElementById('country');
     const percipitationElement = document.getElementById('percipitation-percent');
     const humidityElement = document.getElementById('humidity-percent');
     const windElement = document.getElementById('wind-percent');
-    const weekDaysContainer = document.querySelector('.card-right__week-day');
+    const weekDay = document.getElementById('widget-day1');
+    const weekTemperature = document.getElementById('widget-temperature1');
+    // const weekDaysContainer = document.querySelector('.card-right__week-day');
+
     days.forEach((day) => {
-        const { temperature, date } = day;
-        const dateFormat = new Date(date);
-
-        const weekDay = document.createElement('div');
-        weekDay.classList.add('card-right__week-day-text');
-        weekDay.innerText = daysNames[dateFormat.getDay()];
-
-        const weekTemperature = document.createElement('div');
-        weekTemperature.classList.add('card-right__week-day-temperature');
-        weekTemperature.innerText = `${temperature} °C`;
+      const [day] = days;
+      const {temperature, date} = day;
+      console.log (day.date);
+      if (weekDay) {
+      const dateFormat = new Date(date);
+      weekDay.innerText = daysNames[dateFormat.getDay()];
     };
-    if (weekElement) {
-        const formattedDate = new Date(firstDay.date);
-        debugger;
-        weekElement.innerText = daysName[formattedDate.getDay()];
+    if (weekTemperature) {
+      weekTemperature.innerText = temperature + "°C";
     };
+      // const dayElement = document.createElement('div');
+      // dayElement.classList.add('card-right__widget--unactive');
+      // dayElement.appendChild(weekDay);
+      // dayElement.appendChild(weekTemperature);
+
+      // weekDaysContainer.appendChild(dayElement);
+  });
     if (cityElement) {
         cityElement.innerText = name + ", ";
-        console.log(name);
     };
     if (countryElement) {
         countryElement.innerText = country;
-        console.log(country);
     };
     if (percipitationElement) {
-        percipitationElement.innerText = firstDay.precipitation + "%";
-        console.log(firstDay.precipitation);
+        percipitationElement.innerText = day.precipitation + "%";
     };
     if (humidityElement) {
-        humidityElement.innerText = firstDay.humidity + "%";
-        console.log(firstDay.humidity);
+        humidityElement.innerText = day.humidity + "%";
     };
     if (windElement) {
-        windElement.innerText = firstDay.wind + "km/h";
-        console.log(firstDay.wind);
+        windElement.innerText = day.wind + "km/h";
     };
 });
-function changeLocation() {
-    console.log('clicked');
-};
-    // days.forEach((day) => {
-    //     const { temperature, date } = day;
-    //     const dateFormat = new Date(date);
-
-    //     const weekDay = document.createElement('div');
-    //     weekDay.classList.add('card-right__week-day-text');
-    //     weekDay.innerText = dateFormat.getDay();
-
-    //     const weekTemperature = document.createElement('div');
-    //     weekTemperature.classList.add('card-right__week-day-temperature');
-    //     weekTemperature.innerText = temperature;
-    //     const dayElement = document.createElement('div');
-    //     dayElement.classList.add('card-right__week-day--unactive');
-        dayElement.appendChild(weekDay);
-        dayElement.appendChild(weekTemperature);
-
-        weekDaysContainer.appendChild(dayElement);
-    });
-});
-
-
-// fn1();
-
-// function fn1 (arg1, arg2){
-
-//     console.log('1');
-// }x
-// const fn2 = function(arg1, arg2) {
-    //     console.log('2');
-    // }
-// const fn3 = (arg1, arg2) => {
-//     console.log('3');
-// }
-
-// const fn4 = fn1;
