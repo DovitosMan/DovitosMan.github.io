@@ -129,6 +129,8 @@ const locations = [
       ]
     }
   ];
+
+const daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 window.addEventListener("load", function(){
     const [currentLocation] = locations;
     const { name, country, days } = currentLocation;
@@ -140,7 +142,19 @@ window.addEventListener("load", function(){
     const percipitationElement = document.getElementById('percipitation-percent');
     const humidityElement = document.getElementById('humidity-percent');
     const windElement = document.getElementById('wind-percent');
+    const weekDaysContainer = document.querySelector('.card-right__week-day');
+    days.forEach((day) => {
+        const { temperature, date } = day;
+        const dateFormat = new Date(date);
 
+        const weekDay = document.createElement('div');
+        weekDay.classList.add('card-right__week-day-text');
+        weekDay.innerText = daysNames[dateFormat.getDay()];
+
+        const weekTemperature = document.createElement('div');
+        weekTemperature.classList.add('card-right__week-day-temperature');
+        weekTemperature.innerText = `${temperature} °C`;
+    };
     if (weekElement) {
         weekElement.innerText = firstDay.date.week;
     };
@@ -179,23 +193,15 @@ function changeLocation() {
     //     const weekTemperature = document.createElement('div');
     //     weekTemperature.classList.add('card-right__week-day-temperature');
     //     weekTemperature.innerText = temperature;
-
     //     const dayElement = document.createElement('div');
     //     dayElement.classList.add('card-right__week-day--unactive');
+        dayElement.appendChild(weekDay);
+        dayElement.appendChild(weekTemperature);
 
-    //     dayElement.append(weekDay);
-    //     dayElement.append(weekDaysContainer);
+        weekDaysContainer.appendChild(dayElement);
+    });
+});
 
-    //     weekDaysContainer.append(dayElement);
-    // });
-
-   
-
-    // const widgets = document.querySelectorAll('div');
-    // console.log(widgets);
-
-    // console.log(cityElement);
-   
 
 // fn1();
 
