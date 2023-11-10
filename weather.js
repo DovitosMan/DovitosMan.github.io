@@ -142,7 +142,9 @@ window.addEventListener("load", function(){
     const windElement = document.getElementById('wind-percent');
 
     if (weekElement) {
-        weekElement.innerText = firstDay.date.week;
+        const formattedDate = new Date(firstDay.date);
+        debugger;
+        weekElement.innerText = daysName[formattedDate.getDay()];
     };
     if (cityElement) {
         cityElement.innerText = name + ", ";
