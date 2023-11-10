@@ -1,18 +1,18 @@
-.card-left__top {
+.card-left__topL {
     display: grid;
     grid-template-rows: 44px 36px auto;
     gap: 10px;
     white-space: nowrap;
 }
-.card-left__top-day {
+.card-left__topL-day {
     font-size: 37px;
     font-weight: 700;
 }
-.card-left__top-date {
+.card-left__topL-date {
     font-weight: 500;
     font-size: 22px;
 }
-.card-left__top-location {
+.card-left__topL-location {
     display: grid;
     grid-template-columns: max-content auto;
     grid-gap: 8px;
@@ -20,8 +20,14 @@
     font-weight: 600;
     font-size: 20px;
 }
+.card-left__topL-current-location {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content;
+    gap: 8px;
+}
 @media screen and (max-width:1000px) {
-.card-left__top {
+.card-left__topL {
     justify-items: center;
     margin-bottom: 5%;
 }
