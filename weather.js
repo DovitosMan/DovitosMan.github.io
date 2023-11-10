@@ -130,49 +130,45 @@ const locations = [
     }
   ];
 
-//   console.log(locations);
+const daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+// const svg
 
 window.addEventListener("load", function(){
     const currentLocation = locations[1];
-    const { days } = currentLocation;
+    const { name, country, days } = currentLocation;
     
     const cityElement = document.getElementById("city");
     const countryElement = document.getElementById("country");
 
+    if (cityElement) {
+        cityElement.innerText = name;
+    }
+    if (countryElement) {
+      countryElement.innerText = country; 
+    }
+
     const weekDaysContainer = document.querySelector('.card-right__week-day');
-
-    console.log(weekDaysContainer);
-
     days.forEach((day) => {
         const { temperature, date } = day;
         const dateFormat = new Date(date);
 
         const weekDay = document.createElement('div');
         weekDay.classList.add('card-right__week-day-text');
-        weekDay.innerText = dateFormat.getDay();
+        weekDay.innerText = daysNames[dateFormat.getDay()];
 
         const weekTemperature = document.createElement('div');
         weekTemperature.classList.add('card-right__week-day-temperature');
-        weekTemperature.innerText = temperature;
+        weekTemperature.innerText = `${temperature} °C`;
 
         const dayElement = document.createElement('div');
         dayElement.classList.add('card-right__week-day--unactive');
 
-        dayElement.append(weekDay);
-        dayElement.append(weekDaysContainer);
+        dayElement.appendChild(weekDay);
+        dayElement.appendChild(weekTemperature);
 
-        weekDaysContainer.append(dayElement);
+        weekDaysContainer.appendChild(dayElement);
     });
-
-   
-
-    // const widgets = document.querySelectorAll('div');
-    // console.log(widgets);
-
-    // console.log(cityElement);
-    if (cityElement) {
-        cityElement.innerText = currentLocation.name;
-    }
 });
 
 // fn1();
