@@ -6,6 +6,7 @@
 @import url(./style/topR.css);
 @import url(./style/widget.css);
 @import url(./style/button.css);
+@import url(./style/modal.css);
 *,
 *::before,
 *::after {
