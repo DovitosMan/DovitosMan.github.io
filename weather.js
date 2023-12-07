@@ -129,6 +129,12 @@ const locations = [
     ]
   }
 ];
+// const apiKey = "77891ab9932da5bd5cb13ac764441eef";
+// const getApiUrl = (apiKey,cityName) => 'https://api.openweathermap.org/data/2.5/forecast?&units=metric&q=${cityName}&appid=${apiKey}'
+
+// const result = await fetch(link);
+// const data = await result.json();
+
 const log = console.log
 const App = {
   setup() {
